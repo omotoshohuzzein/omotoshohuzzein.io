@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Omotosho Huzzein — FP&A Specialist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --ink:#111009;--ink-mid:#3B3830;--ink-muted:#7C7870;
+  --gold:#9A7B2F;--gold-light:#C4A24A;--gold-pale:#FBF7EE;
+  --cream:#FDFAF4;--white:#FFFFFF;
+  --rule:rgba(154,123,47,0.2);--border:rgba(17,16,9,0.08);
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Outfit',sans-serif;background:var(--cream);color:var(--ink);margin:0;}
+
+/* NAV */
+.nav{display:flex;align-items:center;justify-content:space-between;padding:18px 48px;border-bottom:0.5px solid var(--rule);background:var(--cream);position:sticky;top:0;z-index:100;}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;letter-spacing:0.5px;color:var(--ink);text-decoration:none;}
+.nav-logo span{color:var(--gold);}
+.nav-links{display:flex;gap:24px;}
+.nav-links a{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink-muted);text-decoration:none;font-weight:500;transition:color 0.2s;}
+.nav-links a:hover{color:var(--gold);}
+.nav-cta{background:var(--ink);color:#fff;font-family:'Outfit',sans-serif;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;padding:9px 20px;border:none;border-radius:2px;cursor:pointer;font-weight:500;transition:background 0.2s;text-decoration:none;display:inline-block;}
+.nav-cta:hover{background:var(--gold);}
+
+/* HERO */
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:88vh;}
+.hero-left{background:var(--ink);padding:80px 48px 60px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;}
+.hero-left::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
+.hero-deco{position:absolute;top:-40px;right:-40px;width:220px;height:220px;border:0.5px solid rgba(154,123,47,0.12);border-radius:50%;}
+.hero-deco2{position:absolute;bottom:60px;left:-60px;width:160px;height:160px;border:0.5px solid rgba(154,123,47,0.08);border-radius:50%;}
+.hero-eyebrow{font-size:10px;letter-spacing:3.5px;text-transform:uppercase;color:var(--gold-light);font-weight:500;margin-bottom:24px;}
+.hero-name{font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:600;color:#fff;line-height:1.05;margin-bottom:6px;}
+.hero-name em{color:var(--gold-light);font-style:italic;}
+.hero-subtitle{font-size:14px;font-weight:300;color:rgba(255,255,255,0.55);letter-spacing:0.3px;line-height:1.6;margin-bottom:32px;max-width:340px;}
+.hero-badges{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:36px;}
+.badge{border:0.5px solid rgba(154,123,47,0.4);color:var(--gold-light);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;padding:5px 11px;border-radius:2px;font-weight:400;}
+.hero-availability{display:flex;align-items:center;gap:10px;font-size:12px;color:rgba(255,255,255,0.4);}
+.avail-dot{width:7px;height:7px;background:#4CAF50;border-radius:50%;box-shadow:0 0 0 2px rgba(76,175,80,0.25);flex-shrink:0;}
+.hero-right{background:var(--gold-pale);padding:80px 48px 60px;display:flex;flex-direction:column;justify-content:space-between;}
+.hero-bio-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:20px;}
+.hero-bio{font-family:'Cormorant Garamond',serif;font-size:20px;line-height:1.7;color:var(--ink-mid);font-weight:400;max-width:380px;margin-bottom:36px;}
+.hero-bio strong{color:var(--ink);font-weight:600;}
+.hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);}
+.hstat{background:var(--gold-pale);padding:20px 16px;}
+.hstat-num{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:600;color:var(--ink);line-height:1;margin-bottom:5px;}
+.hstat-label{font-size:11px;color:var(--ink-muted);line-height:1.4;font-weight:400;}
+
+/* SECTIONS */
+.section{padding:60px 48px;border-bottom:0.5px solid var(--border);}
+.section-pale{padding:60px 48px;border-bottom:0.5px solid var(--border);background:var(--gold-pale);}
+.sec-eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.sec-rule{width:28px;height:0.5px;background:var(--gold);}
+.sec-tag{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:500;}
+.sec-title{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:600;color:var(--ink);line-height:1.15;margin-bottom:8px;}
+.sec-desc{font-size:14px;color:var(--ink-muted);font-weight:300;line-height:1.7;max-width:540px;}
+
+/* SERVICES */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin-top:36px;border:0.5px solid var(--border);}
+.svc-card{background:var(--white);padding:26px 22px;transition:background 0.2s;}
+.svc-card:hover{background:var(--gold-pale);}
+.svc-num{font-family:'Cormorant Garamond',serif;font-size:13px;color:var(--gold);font-weight:500;letter-spacing:1px;margin-bottom:14px;display:block;}
+.svc-icon{font-size:22px;color:var(--gold);margin-bottom:11px;}
+.svc-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:var(--ink);margin-bottom:9px;line-height:1.3;}
+.svc-desc{font-size:13px;color:var(--ink-muted);line-height:1.65;margin-bottom:14px;font-weight:300;}
+.svc-tags{display:flex;flex-wrap:wrap;gap:5px;}
+.stag{background:#F1EDE1;font-size:10px;color:var(--ink-mid);padding:3px 8px;border-radius:2px;letter-spacing:0.5px;text-transform:uppercase;}
+
+/* EXPLAINERS */
+.explainer-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:36px;}
+.exp-card{background:var(--white);border:0.5px solid var(--border);border-radius:4px;overflow:hidden;}
+.exp-card-head{background:var(--ink);padding:18px 22px;display:flex;align-items:center;gap:12px;}
+.exp-card-head-icon{font-size:18px;color:var(--gold-light);}
+.exp-card-head-title{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:#fff;}
+.exp-card-body{padding:20px 22px;}
+.exp-tagline{font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;color:var(--ink-mid);margin-bottom:14px;line-height:1.5;}
+.exp-points{list-style:none;display:flex;flex-direction:column;gap:9px;}
+.exp-points li{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--ink-mid);line-height:1.55;font-weight:300;}
+.exp-dot{width:5px;height:5px;background:var(--gold);border-radius:50%;margin-top:6px;flex-shrink:0;}
+.exp-footer{border-top:0.5px solid var(--border);padding:14px 22px;display:flex;gap:6px;flex-wrap:wrap;}
+.exp-pill{background:var(--gold-pale);font-size:10px;color:var(--gold);padding:3px 10px;border-radius:2px;letter-spacing:0.5px;text-transform:uppercase;font-weight:500;}
+
+/* PROCESS */
+.process-layout{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-top:36px;}
+.process-wheel-wrap{display:flex;justify-content:center;}
+.process-steps-list{display:flex;flex-direction:column;gap:14px;}
+.ps-item{display:flex;align-items:flex-start;gap:14px;}
+.ps-num{width:28px;height:28px;border-radius:50%;background:var(--ink);color:var(--gold-light);font-family:'Cormorant Garamond',serif;font-size:14px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.ps-text strong{font-size:13px;font-weight:500;color:var(--ink);display:block;margin-bottom:2px;}
+.ps-text span{font-size:12px;color:var(--ink-muted);line-height:1.5;font-weight:300;}
+
+/* WORK */
+.work-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:36px;}
+.work-card{background:var(--white);border:0.5px solid var(--border);border-radius:4px;padding:28px 24px;position:relative;overflow:hidden;transition:border-color 0.2s;}
+.work-card:hover{border-color:var(--gold);}
+.work-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold);}
+.work-sector{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:12px;}
+.work-title{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:600;color:var(--ink);margin-bottom:9px;line-height:1.3;}
+.work-desc{font-size:13px;color:var(--ink-muted);line-height:1.65;margin-bottom:16px;font-weight:300;}
+.work-metrics{display:flex;gap:18px;flex-wrap:wrap;}
+.metric-val{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--ink);line-height:1;}
+.metric-label{font-size:10px;color:var(--ink-muted);margin-top:2px;font-weight:400;}
+.work-tag{display:inline-block;background:var(--gold-pale);font-size:10px;color:var(--gold);padding:3px 10px;border-radius:2px;letter-spacing:0.8px;text-transform:uppercase;margin-top:14px;font-weight:500;}
+
+/* TESTIMONIALS */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px;}
+.testi-card{background:var(--white);border:0.5px solid var(--border);border-radius:4px;padding:24px 20px;position:relative;}
+.quote-mark{font-family:'Cormorant Garamond',serif;font-size:56px;color:var(--gold-pale);line-height:0.8;position:absolute;top:16px;left:18px;font-weight:600;user-select:none;}
+.testi-text{font-size:13px;color:var(--ink-mid);line-height:1.7;font-style:italic;margin-bottom:16px;position:relative;z-index:1;padding-top:20px;font-weight:300;}
+.testi-author{display:flex;align-items:center;gap:10px;}
+.testi-avatar{width:36px;height:36px;border-radius:50%;background:var(--gold-pale);border:0.5px solid var(--rule);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;color:var(--gold);flex-shrink:0;}
+.testi-name{font-size:13px;font-weight:500;color:var(--ink);}
+.testi-role{font-size:11px;color:var(--ink-muted);font-weight:300;}
+.stars{color:var(--gold);font-size:11px;margin-bottom:4px;letter-spacing:1px;}
+
+/* CREDENTIALS */
+.cred-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px;}
+.cred-card{background:var(--white);border:0.5px solid var(--border);border-radius:4px;padding:24px 20px;position:relative;overflow:hidden;}
+.cred-card::before{content:'';position:absolute;top:0;left:0;bottom:0;width:3px;background:var(--gold);}
+.cred-badge{width:44px;height:44px;border-radius:50%;background:var(--gold-pale);border:0.5px solid var(--rule);display:flex;align-items:center;justify-content:center;margin-bottom:14px;font-size:20px;color:var(--gold);}
+.cred-acronym{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:var(--gold);line-height:1;margin-bottom:4px;}
+.cred-title{font-size:13px;font-weight:500;color:var(--ink);margin-bottom:6px;line-height:1.4;}
+.cred-body{font-size:12px;color:var(--ink-muted);font-weight:300;line-height:1.6;}
+.cred-issuer{display:flex;align-items:center;gap:6px;margin-top:12px;padding-top:12px;border-top:0.5px solid var(--border);}
+.cred-issuer-dot{width:5px;height:5px;background:var(--gold);border-radius:50%;flex-shrink:0;}
+.cred-issuer-name{font-size:11px;color:var(--ink-muted);font-weight:400;line-height:1.4;}
+
+/* TOOLS */
+.tools-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;}
+.tool-pill{background:var(--white);border:0.5px solid var(--border);border-radius:100px;padding:7px 18px;font-size:12px;color:var(--ink-mid);font-weight:400;display:flex;align-items:center;gap:7px;}
+.tool-pill i{color:var(--gold);font-size:15px;}
+
+/* CTA */
+.cta-band{background:var(--ink);padding:64px 48px;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;}
+.cta-title{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:600;color:#fff;line-height:1.2;margin-bottom:10px;}
+.cta-title em{color:var(--gold-light);font-style:italic;}
+.cta-sub{font-size:14px;color:rgba(255,255,255,0.45);font-weight:300;line-height:1.6;}
+.cta-actions{display:flex;flex-direction:column;gap:12px;align-items:flex-end;}
+.btn-primary{background:var(--gold);color:var(--ink);font-family:'Outfit',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:600;padding:14px 32px;border:none;border-radius:2px;cursor:pointer;white-space:nowrap;transition:background 0.2s;text-decoration:none;display:inline-block;}
+.btn-primary:hover{background:var(--gold-light);}
+.btn-secondary{display:block;color:rgba(255,255,255,0.5);font-family:'Outfit',sans-serif;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:400;padding:10px 0;text-decoration:none;transition:color 0.2s;text-align:right;}
+.btn-secondary:hover{color:var(--gold-light);}
+
+/* FOOTER */
+.footer{background:var(--ink);border-top:0.5px solid rgba(154,123,47,0.15);padding:28px 48px;display:flex;align-items:center;justify-content:space-between;}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;color:rgba(255,255,255,0.5);}
+.footer-logo span{color:var(--gold-light);}
+.footer-copy{font-size:11px;color:rgba(255,255,255,0.25);font-weight:300;}
+.footer-links{display:flex;gap:20px;}
+.footer-links a{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.3);text-decoration:none;transition:color 0.2s;}
+.footer-links a:hover{color:var(--gold-light);}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .services-grid{grid-template-columns:repeat(2,1fr);}
+  .cred-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:640px){
+  .nav{padding:16px 20px;}.nav-links{display:none;}
+  .hero{grid-template-columns:1fr;}.hero-left,.hero-right{padding:40px 20px;}.hero-name{font-size:36px;}
+  .section,.section-pale{padding:40px 20px;}
+  .services-grid,.explainer-grid,.work-grid,.testi-grid,.cred-grid{grid-template-columns:1fr;}
+  .process-layout{grid-template-columns:1fr;}.process-wheel-wrap{display:none;}
+  .cta-band{grid-template-columns:1fr;padding:40px 20px;}.cta-actions{align-items:flex-start;}
+  .footer{flex-direction:column;gap:16px;text-align:center;padding:24px 20px;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a class="nav-logo" href="#">Huzz<span>ein</span></a>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#explainers">How It Works</a>
+    <a href="#work">Work</a>
+    <a href="#credentials">Credentials</a>
+  </div>
+  <a class="nav-cta" href="mailto:omotoshohuzzein@email.com">Hire Me</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-left">
+    <div class="hero-deco"></div>
+    <div class="hero-deco2"></div>
+    <div>
+      <div class="hero-eyebrow">FP&amp;A Specialist · Financial Modeler · Valuation Analyst</div>
+      <div class="hero-name">Omotosho<br><em>Huzzein</em></div>
+      <div class="hero-subtitle">I help founders, CFOs, and investors make confident financial decisions — through models that are clean, auditable, and built to last.</div>
+      <div class="hero-badges">
+        <span class="badge">3-Statement Models</span>
+        <span class="badge">LBO &amp; M&amp;A</span>
+        <span class="badge">DCF Valuation</span>
+        <span class="badge">Equity Research</span>
+        <span class="badge">Budgeting &amp; KPIs</span>
+        <span class="badge">Due Diligence</span>
+        <span class="badge">Audit &amp; Assurance</span>
+      </div>
+    </div>
+    <div class="hero-availability">
+      <div class="avail-dot"></div>
+      Available for new engagements · Remote · Worldwide
+    </div>
+  </div>
+  <div class="hero-right">
+    <div>
+      <div class="hero-bio-label">About</div>
+      <div class="hero-bio">
+        I'm an independent FP&amp;A specialist with a track record of building and auditing financial models for <strong>small and mid-sized clients internationally.</strong> My work spans investment banking–grade models to operating-company FP&amp;A, always delivered with the rigour and precision that high-stakes decisions demand.
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="hstat"><div class="hstat-num">20+</div><div class="hstat-label">Models built &amp; audited</div></div>
+      <div class="hstat"><div class="hstat-num">10</div><div class="hstat-label">Service offerings</div></div>
+      <div class="hstat"><div class="hstat-num">Int'l</div><div class="hstat-label">Multi-geography clients</div></div>
+      <div class="hstat"><div class="hstat-num">100%</div><div class="hstat-label">Audit-ready outputs</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<div class="section" id="services">
+  <div class="sec-eyebrow"><div class="sec-rule"></div><div class="sec-tag">What I Offer</div></div>
+  <div class="sec-title">Full-Spectrum Financial Services</div>
+  <div class="sec-desc">From building a model from scratch to auditing an inherited one — I cover the full range of financial work a growing business needs.</div>
+  <div class="services-grid">
+
+    <div class="svc-card">
+      <span class="svc-num">01</span>
+      <div class="svc-icon"><i class="ti ti-building-bank"></i></div>
+      <div class="svc-title">3-Statement Financial Model</div>
+      <div class="svc-desc">Integrated income statement, balance sheet, and cash flow with dynamic drivers, scenario toggles, and 5-year rolling forecasts.</div>
+      <div class="svc-tags"><span class="stag">P&amp;L</span><span class="stag">Balance Sheet</span><span class="stag">Cash Flow</span></div>
+    </div>
+
+    <div class="svc-card">
+      <span class="svc-num">02</span>
+      <div class="svc-icon"><i class="ti ti-arrows-exchange"></i></div>
+      <div class="svc-title">M&amp;A &amp; LBO Models</div>
+      <div class="svc-desc">Merger consequence analysis (accretion/dilution, synergies) and leveraged buyout models with full debt schedules and IRR sensitivity.</div>
+      <div class="svc-tags"><span class="stag">Accretion/Dilution</span><span class="stag">LBO</span><span class="stag">IRR</span></div>
+    </div>
+
+    <div class="svc-card">
+      <span class="svc-num">03</span>
+      <div class="svc-icon"><i class="ti ti-chart-candle"></i></div>
+      <div class="svc-title">DCF Valuation &amp; Equity Research</div>
+      <div class="svc-desc">Intrinsic value analysis with WACC build-up, terminal value, football field output, and initiating coverage equity research reports.</div>
+      <div class="svc-tags"><span class="stag">WACC</span><span class="stag">Comps</span><span class="stag">Target Price</span></div>
+    </div>
+
+    <div class="svc-card">
+      <span class="svc-num">04</span>
+      <div class="svc-icon"><i class="ti ti-building"></i></div>
+      <div class="svc-title">Real Estate Financial Model</div>
+      <div class="svc-desc">Acquisition and development models with rent rolls, NOI, cap rate analysis, equity waterfalls, and LP/GP return metrics.</div>
+      <div class="svc-tags"><span class="stag">NOI</span><span class="stag">Cap Rate</span><span class="stag">Waterfall</span></div>
+    </div>
+
+    <div class="svc-card">
+      <span class="svc-num">05</span>
+      <div class="svc-icon"><i class="ti ti-calculator"></i></div>
+      <div class="svc-title">Budgeting &amp; KPI Monitoring</div>
+      <div class="svc-desc">Top-down and bottom-up budgets, operating expense tracking, variance analysis, and KPI dashboards for management reporting.</div>
+      <div class="svc-tags"><span class="stag">Budget</span><span class="stag">Variance</span><span class="stag">KPIs</span></div>
+    </div>
+
+    <div class="svc-card">
+      <span class="svc-num">06</span>
+      <div class="svc-icon"><i class="ti ti-report-analytics"></i></div>
+      <div class="svc-title">Financial Analysis</div>
+      <div class="svc-desc">Deep-dive profitability, liquidity, and efficiency analysis — ratio analysis, trend reviews, and strategic recommendations for leadership.</div>
+      <div class="svc-tags"><span class="stag">Ratio Analysis</span><span class="stag">Trends</span><span class="stag">Insights</span></div>
+    </div>
+
+    <div class="svc-card">
+      <span class="svc-num">07</span>
+      <div class="svc-icon"><i class="ti ti-search"></i></div>
+      <div class="svc-title">Due Diligence</div>
+      <div class="svc-desc">Financial due diligence for acquisitions, investments, and partnerships — reviewing historical financials, identifying risks, and validating assumptions.</div>
+      <div class="svc-tags"><span class="stag">Risk Review</span><span class="stag">Assumption Check</span><span class="stag">M&amp;A</span></div>
+    </div>
+
+    <div class="svc-card">
+      <span class="svc-num">08</span>
+      <div class="svc-icon"><i class="ti ti-file-description"></i></div>
+      <div class="svc-title">Financial Reporting</div>
+      <div class="svc-desc">Board-ready financial reports, management accounts, and monthly performance packs — clear, accurate, and designed for decision-making.</div>
+      <div class="svc-tags"><span class="stag">Management Accounts</span><span class="stag">Board Pack</span></div>
+    </div>
+
+    <div class="svc-card">
+      <span class="svc-num">09</span>
+      <div class="svc-icon"><i class="ti ti-shield-check"></i></div>
+      <div class="svc-title">Audit &amp; Assurance</div>
+      <div class="svc-desc">Model auditing, financial statement review, and internal controls assessment — finding errors, closing gaps, and giving stakeholders confidence in the numbers.</div>
+      <div class="svc-tags"><span class="stag">Model Audit</span><span class="stag">Internal Controls</span><span class="stag">IFRS</span></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- EXPLAINERS -->
+<div class="section-pale" id="explainers">
+  <div class="sec-eyebrow"><div class="sec-rule"></div><div class="sec-tag">Plain-Language Guide</div></div>
+  <div class="sec-title">What does this work actually mean for you?</div>
+  <div class="sec-desc">Not a finance expert? No problem. Here's what each core service does in plain terms — and why it matters to your business.</div>
+  <div class="explainer-grid">
+
+    <div class="exp-card">
+      <div class="exp-card-head">
+        <div class="exp-card-head-icon"><i class="ti ti-calculator"></i></div>
+        <div class="exp-card-head-title">Budgeting</div>
+      </div>
+      <div class="exp-card-body">
+        <div class="exp-tagline">Think of a budget as your business's financial game plan for the year.</div>
+        <ul class="exp-points">
+          <li><div class="exp-dot"></div>A <strong style="font-weight:500">top-down budget</strong> starts with the big picture — leadership sets the total spend, then it flows down to departments.</li>
+          <li><div class="exp-dot"></div>A <strong style="font-weight:500">bottom-up budget</strong> starts from each team's real needs and builds up to the full company number.</li>
+          <li><div class="exp-dot"></div>I track how your actual spending compares to the plan every month — so you catch overspending before it becomes a problem.</li>
+          <li><div class="exp-dot"></div>I build the templates, run the reports, and flag the variances — so your management team can focus on decisions, not spreadsheets.</li>
+        </ul>
+      </div>
+      <div class="exp-footer"><span class="exp-pill">Top-down</span><span class="exp-pill">Bottom-up</span><span class="exp-pill">Variance tracking</span></div>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-card-head">
+        <div class="exp-card-head-icon"><i class="ti ti-chart-bar"></i></div>
+        <div class="exp-card-head-title">Metrics, KPIs &amp; Modeling</div>
+      </div>
+      <div class="exp-card-body">
+        <div class="exp-tagline">KPIs are the vital signs of your business — I make sure you're reading them correctly.</div>
+        <ul class="exp-points">
+          <li><div class="exp-dot"></div>I identify the numbers that matter most for <em>your</em> business — revenue growth, margins, customer metrics, and more.</li>
+          <li><div class="exp-dot"></div>I build financial models that let you ask "what if?" — what happens if sales drop 20%? If costs rise? If you hire 10 more staff?</li>
+          <li><div class="exp-dot"></div>I translate complex financial data into clear dashboards your leadership team can actually use and understand.</li>
+          <li><div class="exp-dot"></div>Every metric is linked back to a decision — so reporting is never just a box-ticking exercise.</li>
+        </ul>
+      </div>
+      <div class="exp-footer"><span class="exp-pill">KPI dashboards</span><span class="exp-pill">Scenario modeling</span><span class="exp-pill">Ratio analysis</span></div>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-card-head">
+        <div class="exp-card-head-icon"><i class="ti ti-search"></i></div>
+        <div class="exp-card-head-title">Due Diligence</div>
+      </div>
+      <div class="exp-card-body">
+        <div class="exp-tagline">Before you invest in or buy a business, you need to know exactly what you're getting.</div>
+        <ul class="exp-points">
+          <li><div class="exp-dot"></div>I review the target company's historical financials to verify the numbers are real and accurately presented.</li>
+          <li><div class="exp-dot"></div>I stress-test the assumptions behind revenue forecasts and cost projections — so you don't pay for growth that will never materialise.</li>
+          <li><div class="exp-dot"></div>I identify hidden risks: off-balance-sheet liabilities, overstated assets, unusual cash flow patterns.</li>
+          <li><div class="exp-dot"></div>You get a clear, jargon-free findings report with a summary of risks and a recommendation on how to proceed.</li>
+        </ul>
+      </div>
+      <div class="exp-footer"><span class="exp-pill">Risk identification</span><span class="exp-pill">Assumption review</span><span class="exp-pill">Findings report</span></div>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-card-head">
+        <div class="exp-card-head-icon"><i class="ti ti-shield-check"></i></div>
+        <div class="exp-card-head-title">Audit &amp; Assurance</div>
+      </div>
+      <div class="exp-card-body">
+        <div class="exp-tagline">Audit is about giving you — and your stakeholders — confidence that the numbers are right.</div>
+        <ul class="exp-points">
+          <li><div class="exp-dot"></div>If you've inherited a financial model from someone else, I check it thoroughly for errors, broken formulas, and flawed logic.</li>
+          <li><div class="exp-dot"></div>I review your internal financial controls — the processes that prevent mistakes and fraud from going undetected.</li>
+          <li><div class="exp-dot"></div>I ensure your financial statements comply with IFRS or local accounting standards, so you're prepared for external auditors.</li>
+          <li><div class="exp-dot"></div>The result is a written assurance report that you can share with investors, boards, or lenders as evidence of financial integrity.</li>
+        </ul>
+      </div>
+      <div class="exp-footer"><span class="exp-pill">Model audit</span><span class="exp-pill">IFRS compliance</span><span class="exp-pill">Controls review</span></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- PROCESS -->
+<div class="section" id="process">
+  <div class="sec-eyebrow"><div class="sec-rule"></div><div class="sec-tag">My Approach</div></div>
+  <div class="sec-title">The analysis process</div>
+  <div class="sec-desc">Every engagement follows a structured 8-step process — the same one used for rigorous financial analysis and reporting.</div>
+  <div class="process-layout">
+    <div class="process-wheel-wrap">
+      <svg viewBox="0 0 300 300" width="280" height="280" aria-hidden="true">
+        <circle cx="150" cy="150" r="118" fill="#F1EDE1" stroke="rgba(154,123,47,0.15)" stroke-width="1"/>
+        <path d="M150,150 L150,32 A118,118 0 0,1 233,71 Z" fill="#111009" opacity="0.85"/>
+        <path d="M150,150 L233,71 A118,118 0 0,1 268,150 Z" fill="#9A7B2F" opacity="0.7"/>
+        <path d="M150,150 L268,150 A118,118 0 0,1 233,229 Z" fill="#111009" opacity="0.6"/>
+        <path d="M150,150 L233,229 A118,118 0 0,1 150,268 Z" fill="#9A7B2F" opacity="0.5"/>
+        <path d="M150,150 L150,268 A118,118 0 0,1 67,229 Z" fill="#111009" opacity="0.4"/>
+        <path d="M150,150 L67,229 A118,118 0 0,1 32,150 Z" fill="#9A7B2F" opacity="0.35"/>
+        <path d="M150,150 L32,150 A118,118 0 0,1 67,71 Z" fill="#111009" opacity="0.25"/>
+        <path d="M150,150 L67,71 A118,118 0 0,1 150,32 Z" fill="#9A7B2F" opacity="0.2"/>
+        <circle cx="150" cy="150" r="42" fill="#FDFAF4"/>
+        <text x="150" y="145" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="12" font-weight="600" fill="#111009">Analysis</text>
+        <text x="150" y="160" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="12" font-weight="600" fill="#9A7B2F">Process</text>
+        <text x="153" y="64" text-anchor="middle" font-family="Outfit,sans-serif" font-size="11" font-weight="500" fill="#fff">1 · Learn</text>
+        <text x="218" y="105" text-anchor="middle" font-family="Outfit,sans-serif" font-size="11" font-weight="500" fill="#fff">2 · Validate</text>
+        <text x="232" y="175" text-anchor="middle" font-family="Outfit,sans-serif" font-size="11" font-weight="500" fill="#fff">3 · Analyze</text>
+        <text x="194" y="240" text-anchor="middle" font-family="Outfit,sans-serif" font-size="11" font-weight="500" fill="#fff">4 · Test</text>
+        <text x="106" y="240" text-anchor="middle" font-family="Outfit,sans-serif" font-size="11" font-weight="500" fill="#fff">5 · Interpret</text>
+        <text x="68" y="175" text-anchor="middle" font-family="Outfit,sans-serif" font-size="11" font-weight="500" fill="#fff">6 · Format</text>
+        <text x="82" y="105" text-anchor="middle" font-family="Outfit,sans-serif" font-size="11" font-weight="500" fill="#111009">7 · Report</text>
+        <text x="118" y="64" text-anchor="middle" font-family="Outfit,sans-serif" font-size="11" font-weight="500" fill="#111009">8 · Suggest</text>
+      </svg>
+    </div>
+    <div class="process-steps-list">
+      <div class="ps-item"><div class="ps-num">1</div><div class="ps-text"><strong>Learn</strong><span>Understand the systems, products, pricing, and people behind the numbers.</span></div></div>
+      <div class="ps-item"><div class="ps-num">2</div><div class="ps-text"><strong>Validate</strong><span>Confirm the information is correct, complete, and traceable to source.</span></div></div>
+      <div class="ps-item"><div class="ps-num">3</div><div class="ps-text"><strong>Analyze</strong><span>Examine the data to identify trends, anomalies, and key drivers.</span></div></div>
+      <div class="ps-item"><div class="ps-num">4</div><div class="ps-text"><strong>Test</strong><span>Stress-test assumptions and check outputs for accuracy and transparency.</span></div></div>
+      <div class="ps-item"><div class="ps-num">5</div><div class="ps-text"><strong>Interpret</strong><span>Translate financial results into meaningful, decision-relevant output.</span></div></div>
+      <div class="ps-item"><div class="ps-num">6</div><div class="ps-text"><strong>Format</strong><span>Present data as clear metrics, KPIs, and board-ready visuals.</span></div></div>
+      <div class="ps-item"><div class="ps-num">7</div><div class="ps-text"><strong>Report</strong><span>Deliver findings to senior management and key stakeholders.</span></div></div>
+      <div class="ps-item"><div class="ps-num">8</div><div class="ps-text"><strong>Suggest</strong><span>Recommend specific actions for revenue improvement and cost savings.</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURED WORK -->
+<div class="section-pale" id="work">
+  <div class="sec-eyebrow"><div class="sec-rule"></div><div class="sec-tag">Featured Projects</div></div>
+  <div class="sec-title">Selected Engagements</div>
+  <div class="sec-desc">Representative work across geographies and model types — all details anonymized for client confidentiality.</div>
+  <div class="work-grid">
+
+    <div class="work-card">
+      <div class="work-sector">Private Equity · West Africa</div>
+      <div class="work-title">LBO Model — Consumer Goods Acquisition</div>
+      <div class="work-desc">Built a full LBO model for a PE firm evaluating the buyout of a regional FMCG business. Included a 5-year operating model, multi-tranche debt schedule, and IRR sensitivity across entry multiples and exit assumptions.</div>
+      <div class="work-metrics">
+        <div class="metric"><div class="metric-val">5-yr</div><div class="metric-label">Operating forecast</div></div>
+        <div class="metric"><div class="metric-val">3</div><div class="metric-label">Debt tranches</div></div>
+        <div class="metric"><div class="metric-val">IRR</div><div class="metric-label">Sensitivity table</div></div>
+      </div>
+      <span class="work-tag">LBO Model</span>
+    </div>
+
+    <div class="work-card">
+      <div class="work-sector">Real Estate · International Client</div>
+      <div class="work-title">Mixed-Use Development — Acquisition Model</div>
+      <div class="work-desc">Modeled a mixed-use property acquisition including construction draw schedule, lease-up assumptions, NOI stabilization, and a 3-tier equity waterfall for LP/GP returns.</div>
+      <div class="work-metrics">
+        <div class="metric"><div class="metric-val">3-tier</div><div class="metric-label">Equity waterfall</div></div>
+        <div class="metric"><div class="metric-val">NOI</div><div class="metric-label">Stabilization bridge</div></div>
+        <div class="metric"><div class="metric-val">EM &amp; IRR</div><div class="metric-label">Return metrics</div></div>
+      </div>
+      <span class="work-tag">Real Estate Model</span>
+    </div>
+
+    <div class="work-card">
+      <div class="work-sector">Corporate Finance · SaaS Business</div>
+      <div class="work-title">3-Statement Model &amp; Investor Dashboard</div>
+      <div class="work-desc">Built a fully integrated 3-statement model with ARR/MRR drivers, cohort-based churn, headcount plan, and a one-page investor summary with base, bull, and bear scenarios.</div>
+      <div class="work-metrics">
+        <div class="metric"><div class="metric-val">3</div><div class="metric-label">Scenarios (B/U/D)</div></div>
+        <div class="metric"><div class="metric-val">ARR</div><div class="metric-label">Driver-based revenue</div></div>
+        <div class="metric"><div class="metric-val">1-pg</div><div class="metric-label">Investor summary</div></div>
+      </div>
+      <span class="work-tag">3-Statement Model</span>
+    </div>
+
+    <div class="work-card">
+      <div class="work-sector">Equity Research · Listed Industrials</div>
+      <div class="work-title">Initiating Coverage — Industrial Conglomerate</div>
+      <div class="work-desc">Produced a full equity research report with DCF valuation, trading comps, precedent transaction analysis, target price derivation, and a Buy/Hold/Sell investment recommendation.</div>
+      <div class="work-metrics">
+        <div class="metric"><div class="metric-val">DCF</div><div class="metric-label">Primary valuation</div></div>
+        <div class="metric"><div class="metric-val">+Comps</div><div class="metric-label">Cross-check</div></div>
+        <div class="metric"><div class="metric-val">TP</div><div class="metric-label">Target price issued</div></div>
+      </div>
+      <span class="work-tag">Equity Research</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<div class="section">
+  <div class="sec-eyebrow"><div class="sec-rule"></div><div class="sec-tag">Client Feedback</div></div>
+  <div class="sec-title">What clients say</div>
+  <div class="testi-grid">
+
+    <div class="testi-card">
+      <div class="quote-mark">"</div>
+      <div class="stars">★★★★★</div>
+      <div class="testi-text">The LBO model Huzzein delivered was investor-ready from day one. Clean structure, no circular errors, and the scenario toggles saved us hours in our IC presentation.</div>
+      <div class="testi-author"><div class="testi-avatar">AK</div><div><div class="testi-name">A. Kolade</div><div class="testi-role">Investment Associate, PE Fund</div></div></div>
+    </div>
+
+    <div class="testi-card">
+      <div class="quote-mark">"</div>
+      <div class="stars">★★★★★</div>
+      <div class="testi-text">We hired him to audit a model inherited from a previous advisor. He found 4 material errors and rewrote the entire cash flow section. The clarity of his findings report was exceptional.</div>
+      <div class="testi-author"><div class="testi-avatar">MB</div><div><div class="testi-name">M. Babatunde</div><div class="testi-role">CFO, Consumer Goods Company</div></div></div>
+    </div>
+
+    <div class="testi-card">
+      <div class="quote-mark">"</div>
+      <div class="stars">★★★★★</div>
+      <div class="testi-text">Delivered our 3-statement model with full SaaS metrics in under 5 days. The documentation made it easy for our team to update it every month. Highly recommended.</div>
+      <div class="testi-author"><div class="testi-avatar">OP</div><div><div class="testi-name">O. Peters</div><div class="testi-role">Founder, SaaS Startup</div></div></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- CREDENTIALS -->
+<div class="section-pale" id="credentials">
+  <div class="sec-eyebrow"><div class="sec-rule"></div><div class="sec-tag">Qualifications</div></div>
+  <div class="sec-title">Professional Credentials</div>
+  <div class="sec-desc">Formally trained and certified across accounting, financial analysis, and financial modeling — giving clients confidence in both the technical rigour and professional standards of every engagement.</div>
+  <div class="cred-grid">
+
+    <div class="cred-card">
+      <div class="cred-badge"><i class="ti ti-certificate"></i></div>
+      <div class="cred-acronym">ACA</div>
+      <div class="cred-title">Associate Chartered Accountant</div>
+      <div class="cred-body">A globally recognised professional accounting qualification covering financial reporting, auditing, taxation, and business strategy. Demonstrates mastery of accounting principles, ethics, and professional judgment.</div>
+      <div class="cred-issuer"><div class="cred-issuer-dot"></div><div class="cred-issuer-name">Institute of Chartered Accountants of Nigeria (ICAN)</div></div>
+    </div>
+
+    <div class="cred-card">
+      <div class="cred-badge"><i class="ti ti-award"></i></div>
+      <div class="cred-acronym">AAT</div>
+      <div class="cred-title">Associate Accounting Technician</div>
+      <div class="cred-body">A foundational professional qualification in accounting and financial management, recognised across West Africa. Covers bookkeeping, financial accounts preparation, cost accounting, and management information systems.</div>
+      <div class="cred-issuer"><div class="cred-issuer-dot"></div><div class="cred-issuer-name">Accountancy Body of West Africa (ABWA)</div></div>
+    </div>
+
+    <div class="cred-card">
+      <div class="cred-badge"><i class="ti ti-chart-line"></i></div>
+      <div class="cred-acronym">FMVA</div>
+      <div class="cred-title">Financial Modeling &amp; Valuation Analyst</div>
+      <div class="cred-body">A specialised certification in financial modeling, DCF valuation, M&amp;A, LBO, and equity research. Validates hands-on ability to build investment banking–grade models to industry-standard best practices.</div>
+      <div class="cred-issuer"><div class="cred-issuer-dot"></div><div class="cred-issuer-name">Corporate Finance Institute (CFI)</div></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- TOOLS -->
+<div class="section">
+  <div class="sec-eyebrow"><div class="sec-rule"></div><div class="sec-tag">Technical Stack</div></div>
+  <div class="sec-title">Tools &amp; Competencies</div>
+  <div class="tools-row">
+    <div class="tool-pill"><i class="ti ti-file-spreadsheet"></i>Microsoft Excel (Advanced)</div>
+    <div class="tool-pill"><i class="ti ti-chart-bar"></i>Power Query</div>
+    <div class="tool-pill"><i class="ti ti-calculator"></i>IFRS &amp; Local GAAP</div>
+    <div class="tool-pill"><i class="ti ti-arrows-transfer-down"></i>DCF &amp; Comparable Analysis</div>
+    <div class="tool-pill"><i class="ti ti-building-bank"></i>Investment Banking Models</div>
+    <div class="tool-pill"><i class="ti ti-report-money"></i>Variance Analysis</div>
+    <div class="tool-pill"><i class="ti ti-world"></i>Multi-Currency Modeling</div>
+    <div class="tool-pill"><i class="ti ti-presentation-analytics"></i>Board-Ready Outputs</div>
+    <div class="tool-pill"><i class="ti ti-shield-check"></i>Model Auditing</div>
+    <div class="tool-pill"><i class="ti ti-brand-google-drive"></i>Google Sheets</div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-band">
+  <div>
+    <div class="cta-title">Let's build something<br><em>decision-ready.</em></div>
+    <div class="cta-sub">Typical engagements take 3–7 business days. Available for both project-based and retainer work.</div>
+  </div>
+  <div class="cta-actions">
+    <a class="btn-primary" href="mailto:omotoshohuzzein@email.com">Start a Project ↗</a>
+    <a class="btn-secondary" href="mailto:omotoshohuzzein@email.com">Not sure yet? Let's talk →</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-logo">Omotosho <span>Huzzein</span></div>
+  <div class="footer-copy">© 2026 · ACA · AAT · FMVA · Available Worldwide</div>
+  <div class="footer-links">
+    <a href="#">LinkedIn</a>
+    <a href="mailto:omotoshohuzzein@email.com">Email</a>
+    <a href="#">Pricing</a>
+  </div>
+</div>
+
+</body>
+</html>
